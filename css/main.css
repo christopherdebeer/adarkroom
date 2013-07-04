@@ -59,6 +59,12 @@ div#header {
 	text-decoration: underline;	
 }
 
+.loadSave {
+	position: absolute;
+	right: 130px;
+	bottom: 10px;
+	cursor: pointer;
+}
 .share {
 	position: absolute;
 	right: 70px;
