@@ -90,6 +90,21 @@ var Engine = {
 		$('<div>').attr('id', 'locationSlider').appendTo('#main');
 		
 		$('<span>')
+			.addClass('loadSave')
+			.text('load.')
+			.click(function(){
+	save = prompt("Paste your save below");
+	state = null;
+	try {
+	  state = JSON.parse( save )
+	} catch (e) {
+	  alert( "invalid or malformed save." )
+	}
+	if (state) Engine.loadGame( state );
+      })
+      .appendTo('body');
+
+		$('<span>')
 			.addClass('deleteSave')
 			.text('restart.')
 			.click(Engine.confirmDelete)
@@ -154,9 +169,9 @@ var Engine = {
 		}
 	},
 	
-	loadGame: function() {
+	loadGame: function( state ) {
 		try {
-			var savedState = JSON.parse(localStorage.gameState);
+			var savedState = state || JSON.parse(localStorage.gameState);
 			if(savedState) {
 				State = savedState;
 				Engine.upgradeState();
