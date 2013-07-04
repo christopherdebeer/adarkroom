@@ -342,10 +342,10 @@ var Outside = {
 		$('<span>').text(num).appendTo(val);
 		
 		if(name != 'gatherer') {
-		  $('<div>').addClass('maxBtn').appendTo(val).click(Outside.maxWorker);
-			$('<div>').addClass('upBtn').appendTo(val).click(Outside.increaseWorker);
-			$('<div>').addClass('dnBtn').appendTo(val).click(Outside.decreaseWorker);
-			$('<div>').addClass('zeroBtn').appendTo(val).click(Outside.zeroWorker);
+			$('<div>&laquo;</div>').addClass('zeroBtn').appendTo(val).click(Outside.zeroWorker);
+			$('<div>-</div>').addClass('dnBtn').appendTo(val).click(Outside.decreaseWorker);
+			$('<div>+</div>').addClass('upBtn').appendTo(val).click(Outside.increaseWorker);
+		  $('<div>&raquo;</div>').addClass('maxBtn').appendTo(val).click(Outside.maxWorker);
 		}
 		
 		$('<div>').addClass('clear').appendTo(row);

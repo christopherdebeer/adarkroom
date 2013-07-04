@@ -227,10 +227,10 @@ var Path = {
 		var val = $('<div>').addClass('row_val').appendTo(row);
 		
 		$('<span>').text(num).appendTo(val);
-		$('<div>').addClass('upBtn').appendTo(val).click(Path.increaseSupply);
-		$('<div>').addClass('dnBtn').appendTo(val).click(Path.decreaseSupply);
-		$('<div>').addClass('maxBtn').appendTo(val).click(Path.maxSupply);
-		$('<div>').addClass('zeroBtn').appendTo(val).click(Path.zeroSupply);
+		$('<div>&laquo;</div>').addClass('zeroBtn').appendTo(val).click(Path.zeroSupply);
+		$('<div>-</div>').addClass('dnBtn').appendTo(val).click(Path.decreaseSupply);
+		$('<div>+</div>').addClass('upBtn').appendTo(val).click(Path.increaseSupply);
+		$('<div>&raquo;</div>').addClass('maxBtn').appendTo(val).click(Path.maxSupply);
 		$('<div>').addClass('clear').appendTo(row);
 		
 		var numAvailable = Engine.getStore(name);

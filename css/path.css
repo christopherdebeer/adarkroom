@@ -28,6 +28,9 @@ div.outfitRow > .row_val {
 	-ms-user-select: none;
 	user-select: none;
 }
+div.outfitRow > .row_val span {
+ margin-right :1em
+}
 
 div.outfitRow .tooltip {
 	width: 150px;
